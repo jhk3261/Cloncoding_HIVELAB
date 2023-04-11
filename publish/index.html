@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.min.css">
     <script src="./js/main.js" defer></script>
+    <script type="text/javascript" src="./js/libs/jquery.fullpage.min.js"></script>
+    <script src="./js/page.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -14,7 +18,7 @@
     <script src="https://kit.fontawesome.com/32afc995e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="header darkmode">
         <h1 class="logo">
             <a href="/">
                 <img src="./img/logo_w.png" class="title">
@@ -28,70 +32,90 @@
                 <li class="item"><a href="#">PEOPLE</a></li>
                 <li class="item"><a href="#">CONTACT</a></li>
             </ul>
+            <div class="menuline"></div>
         </nav>
         <div class="etcMenu">
             <ul class="submenubar">
                 <li class="item">
-                    <button type="button" class="lk_intro">
+                    <button type="button" id="lk" class="lk_intro">
                         <i class="fa-solid fa-download" style="font-size:0.825rem"></i>
                         회사소개서
                     </button>
-                    <!-- <ul class="submenu intro">
+                    <ul class="submenu intro">
                         <li>하이브랩 오피셜</li>
                         <li>디지털 마케팅 그룹</li>
                         <li>디지털 플랫폼 그룹</li>
                         <li>기술개발 그룹</li>
                         <li>게임 디자인 그룹</li>
-                    </ul>    -->
+                    </ul>
                 </li>
                 <li class="item">
-                    <button type="button" class="lk">BLOG</button>
-                    <!-- <ul class="submenu blog">
+                    <button type="button" id="lk" class="lk">BLOG</button>
+                    <ul class="submenu blog">
                         <li>HIVELAB BLOG</li>
                         <li>TechBlog</li>
-                    </ul> -->
+                    </ul>
                 </li>
                 <li class="item">
-                    <button type="button" class="lk">FACEBOOK</button>
+                    <button type="button" id="lk" class="lk">FACEBOOK</button>
                 </li>
                 <li class="item item_rang">
-                    <button type="button" class="lk">
+                    <button type="button" id="lk" class="lk">
                         KOR
-                        <i class="fa-solid fa-caret-down"></i>
+                        <i class="fa-solid fa-caret-down" style="font-size:0.7rem"></i>
+                        <i class="fa-solid fa-caret-up" style="display: none; font-size:0.7rem"></i>
                     </button>
-                    <!-- <ul class="submenu language">
+                    <ul class="submenu language">
                         <li>Korean</li>
                         <li>English</li>
-                    </ul> -->
+                    </ul>
                 </li>
             </ul>
         </div>
     </header>
-    <!-- <main class="fullpage fullwrap">
-        <h1 class="mainTitle">Hybrid<br>Digital Solution.</h1>
-        <h3 class="mainIntro">하이브랩은 플랫폼 중심의 디지털 커뮤니케이션 에이전시입니다.</h3>
-    </main>
-    <div class="introDown">
-        회사소개서<br>
-        <span class="blind">다운로드</span>
-        <img icon>
+    <div id="fullpage">
+        <main class="section s1">
+            <div class="mainTextWrap">
+                <h1 class="mainTitle">Hybrid<br>Digital Solution.</h1>
+                <h3 class="mainIntro">하이브랩은 플랫폼 중심의 디지털 커뮤니케이션 에이전시입니다.</h3>
+            </div>
+            <div class="mainVideoWrap">
+                <video id="mainVideo" autoplay loop muted data-keepplaying>
+                    <source src="./img/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="introDown">
+                회사소개서<br>
+                <i class="fa-solid fa-download" style="font-size:1.25rem"></i>
+            </div>
+        </main>
+        <section class="section s2">
+            
+        </section>
+        <section class="section s3">
+            
+        </section>
+        <section class="section s4">
+            
+        </section>
     </div>
-    <div class="page nav">
+
+    <div class="page dark-mode nav">
         <p class="total">
-            <em class="current">01</em>
+            <span class="current">01</span></br>
             /04
         </p>
         <div class="pageBtn">
             <button type="button" class="prev">
-                <span class="blind">이전</span>
+                <i class="fa-solid fa-angle-up"></i>
             </button>
             <button type="button" class="next">
-                <span class="blind">다음</span>
+                <i class="fa-solid fa-angle-down"></i>
             </button>
         </div>
     </div>
-    <footer class="footer">
-        ⓒHIVELAB All rights reserved.
-    </footer> -->
+    <footer class="footer dark">
+        ⓒ ggo__99 All rights reserved.
+    </footer>
 </body>
 </html>
